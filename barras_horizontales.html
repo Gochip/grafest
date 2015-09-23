@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Barras horizontales</title>
+        <script src="jquery.js"></script>
+        <script src="js/barras_horizontales.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#grafico1").barra_horizonal();
+                $("#grafico2").barra_horizonal();
+            });
+        </script>
+    </head>
+    <body>
+        <h1 align="center">Librería Grafest</h1>
+        <h2>Gráfico de barras</h2>
+        <div id="grafico1" style="position:relative">
+            <canvas width="400" height="200"></canvas>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Equipo</th>
+                        <th>Puntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="color: red">
+                        <td>A</td>
+                        <td>3</td>
+                    </tr>
+                    <tr style="color: blue">
+                        <td>B</td>
+                        <td>2</td>
+                    </tr>
+                    <tr style="color: yellow">
+                        <td>C</td>
+                        <td>2</td>
+                    </tr>
+                    <tr style="color: green">
+                        <td>D</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="grafico2" style="position:relative">
+            <canvas width="400" height="200"></canvas>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Equipo</th>
+                        <th>Puntos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="color: red">
+                        <td>A</td>
+                        <td>3067</td>
+                    </tr>
+                    <tr style="color: blue">
+                        <td>B</td>
+                        <td>9078</td>
+                    </tr>
+                    <tr style="color: yellow">
+                        <td>C</td>
+                        <td>5674</td>
+                    </tr>
+                    <tr style="color: green">
+                        <td>D</td>
+                        <td>1890</td>
+                    </tr>
+                    <tr style="color: gray">
+                        <td>D</td>
+                        <td>2100</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

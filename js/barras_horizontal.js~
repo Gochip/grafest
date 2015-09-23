@@ -1,0 +1,13 @@
+/*
+    Este script representa un gráfico de barras horizontal.
+*/
+(function($){
+    $.barra_horizonal = function(){
+        var object = this;
+		var ops = object.options;
+		object.div = object.element;
+
+		object.canvas = $(object.div).find("canvas")[0];
+		object.contexto = object.canvas.getContext("2d");
+    }
+}(jQuery));

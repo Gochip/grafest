@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo plugin</title>
+        <script src="../jquery.js" ></script>
+        <script>
+            $(document).ready(function(){
+                $.fn.greenify = function(){
+                    this.css("backgroundColor", "green");
+                    return this;
+                }
+                $("div").greenify();
+            });
+        </script>
+    </head>
+    <body>
+        <!-- Ejemplo extraído de https://learn.jquery.com/plugins/basic-plugin-creation/-->
+        <div>
+            Prueba.
+        </div>
+    </body>
+</html>
