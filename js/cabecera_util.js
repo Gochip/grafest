@@ -6,7 +6,7 @@
         objeto.click(function(){
             oculto = !oculto;
             if(oculto) {
-                objeto.find(".spanDatos").hide();
+                objeto.find(".spanDatos").remove();
                 return;
             }
             var indice = objeto.index();
@@ -18,13 +18,16 @@
                 n++;
             });
             var span = $("<span class='spanDatos'></span>");
-            var ancho = objeto.css("width");
+            var ancho = parseInt(objeto.css("width"));
+            var left = ancho * indice;
+            console.log(indice);
             span.css({
                 "background-color": "lightgreen",
                 "padding": "5px",
+                "width": ancho,
                 "position": "absolute",
                 "top": "-50px",
-                "left": ancho,
+                "left": left,
                 "border-radius": "10px"
             });
             var promedio = suma / n;
