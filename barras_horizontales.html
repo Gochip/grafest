@@ -5,10 +5,13 @@
         <title>Barras horizontales</title>
         <script src="jquery.js"></script>
         <script src="js/barras_horizontales.js"></script>
+        <script src="js/cabecera_util.js"></script>
         <script>
             $(document).ready(function(){
                 $("#grafico1").barra_horizonal();
                 $("#grafico2").barra_horizonal();
+                $("#cabeceraPuntos1").calculoPromedio();
+                $("#cabeceraPuntos2").calculoPromedio();
             });
         </script>
         <style>
@@ -26,7 +29,7 @@
                 <thead>
                     <tr>
                         <th>Equipo</th>
-                        <th>Puntos</th>
+                        <th id="cabeceraPuntos1">Puntos</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,7 +58,7 @@
                 <thead>
                     <tr>
                         <th>Equipo</th>
-                        <th>Puntos</th>
+                        <th id="cabeceraPuntos2">Puntos</th>
                     </tr>
                 </thead>
                 <tbody>
