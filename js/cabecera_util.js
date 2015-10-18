@@ -3,11 +3,11 @@
         var objeto = this;
         var oculto = true;
         objeto.css("cursor", "pointer");
-        objeto.click(function(){
+        objeto.on("contextmenu", function(event){
             oculto = !oculto;
             if(oculto) {
                 objeto.find(".spanDatos").remove();
-                return;
+                return false;
             }
             var indice = objeto.index();
             var suma = 0;
@@ -21,19 +21,17 @@
             });
             var span = $("<span class='spanDatos'></span>");
             var ancho = parseInt(objeto.css("width"));
-            var left = ancho * indice;
+            var left = ancho * (indice - 1);
             span.css({
-                "background-color": "lightgreen",
+                "display": "inline",
                 "padding": "5px",
-                "width": ancho,
-                "position": "absolute",
-                "top": "-50px",
-                "left": left,
+                "font-size": "10px",
                 "border-radius": "10px"
             });
             var promedio = suma / n;
-            span.html("Prom: " + promedio);
+            span.html("(Prom: " + promedio + ")");
             objeto.append(span);
+            return false;
         });
     }
 }(jQuery));
