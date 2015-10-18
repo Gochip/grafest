@@ -13,14 +13,15 @@
             var suma = 0;
             var n = 0;
             objeto.parents("table").find("tr td:nth-child(" + (indice + 1) + ")").each(function(){
-                x = $(this).html();
-                suma += parseInt(x);
+                x = parseInt($(this).html());
+                if(!isNaN(x)){
+                    suma += x;
+                }
                 n++;
             });
             var span = $("<span class='spanDatos'></span>");
             var ancho = parseInt(objeto.css("width"));
             var left = ancho * indice;
-            console.log(indice);
             span.css({
                 "background-color": "lightgreen",
                 "padding": "5px",
